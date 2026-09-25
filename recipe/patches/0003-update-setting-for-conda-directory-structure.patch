@@ -1,12 +1,12 @@
-From 9a10a808fa8a27a61e95c4d0a3383c985affb9c2 Mon Sep 17 00:00:00 2001
+From 3118add5307bf459cebc0cfa68641e44080a33ea Mon Sep 17 00:00:00 2001
 From: jvolkening <jdv@base2bio.com>
 Date: Wed, 12 Mar 2025 14:51:06 -0500
 Subject: [PATCH] compile with uniform paths using VS
 
 ---
  win32/Makefile  |  11 ++--
- win32/config.vc | 156 ++++++++++++++++++++++++------------------------
- 2 files changed, 83 insertions(+), 84 deletions(-)
+ win32/config.vc | 154 ++++++++++++++++++++++++------------------------
+ 2 files changed, 82 insertions(+), 83 deletions(-)
 
 diff --git a/win32/Makefile b/win32/Makefile
 index 42d452e..2f6ce47 100644
@@ -66,7 +66,7 @@ index 42d452e..2f6ce47 100644
  installbare : utils ..\pod\perltoc.pod
  	$(PERLEXE) ..\installperl
 diff --git a/win32/config.vc b/win32/config.vc
-index 65ff735..5f6673b 100644
+index 65ff735..023e916 100644
 --- a/win32/config.vc
 +++ b/win32/config.vc
 @@ -22,8 +22,8 @@ api_subversion='~PERL_API_SUBVERSION~'
@@ -323,13 +323,7 @@ index 65ff735..5f6673b 100644
  use64bitint='undef'
  usecbacktrace='undef'
  usecrosscompile='undef'
-@@ -1166,12 +1164,12 @@ useperlio='define'
- useposix='true'
- usequadmath='undef'
- usereentrant='undef'
--userelocatableinc='undef'
-+userelocatableinc='define'
- useshrplib='true'
+@@ -1171,7 +1169,7 @@ useshrplib='true'
  usesitecustomize='undef'
  usesocks='undef'
  usethreads='undef'
